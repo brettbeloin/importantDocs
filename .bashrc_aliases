@@ -1,0 +1,30 @@
+#all of the custom alias defintions for the .bashrc file
+
+#add this to the .bashrc file
+if [ -f "$HOME/.bashrc_aliases" ]; then
+    . "$HOME/.bashrc_aliases"
+fi
+
+# google pass
+# A9$fD2w@7QhL6#Z
+
+#system aliases
+alias sysEdit='nvim .bashrc && source .bashrc'
+alias sysRead='cat .bashrc_aliases'
+alias sysOff='shutdown now'
+alias sysHibernate='sudo systemctl hibernate'
+alias sysUpdate='sudo apt update && sudo apt upgrade -y'
+#alias sysNvidia='sudo apt install nvidia-driver-$1'
+alias sysManager='/home/bbeloin/go/bin/./gotop --nvidia --fahrenheit --mbps -a -r 01s'
+alias sysInfo='inxi -Fxz'
+alias sysTarUzip='tar -xzf $1'
+alias sysUzip='unzip -e $1'
+
+
+#Web aliases
+alias open='xdg-open  $1'
+alias chrome='xdg-open  https://www.google.com'
+alias youtube='xdg-open  https://www.youtube.com'
+
+#applacations
+alias balenaEtcher='Downloads/balenaEtcher-linux-x64/./balena-etcher'
