@@ -1,1 +1,1 @@
-This entire project is just to be able to retrive my alais faster than google Drive
+This is just a way to get rid of google drive and make setting up a new computer easier.
