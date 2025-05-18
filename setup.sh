@@ -8,9 +8,6 @@ if ! tmux has-session -t "$SESH" 2>/dev/null; then
     tmux new-session -ds "$SESH" -n "Editor"
     tmux send-keys -t "$SESH:Editor" "cd ~/nc/yearTwo/csc252/" C-m
 
-    tmux new-window -t "$SESH" -n "Test"
-    tmux send-keys -t "$SESH:Test" "cd ~/nc/yearTwo/csc252/" C-m
-
     tmux new-window -t "$SESH" -n "Home"
 fi
 
