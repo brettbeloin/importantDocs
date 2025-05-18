@@ -5,21 +5,29 @@ if [ -f "$HOME/.bashrc_aliases" ]; then
     . "$HOME/.bashrc_aliases"
 fi
 
-# google pass
-# A9$fD2w@7QhL6#Z
+#Open tmux with a created session
+if [ -z "$TMUX" ]; then
+    ~/setup.sh
+fi
+
+#all of the custom alias defintions for the .bashrc file
 
 #system aliases
-alias sysEdit='nvim .bashrc && source .bashrc'
-alias sysRead='cat .bashrc_aliases'
+alias sysEdit='nvim ~/.bashrc && source ~/.bashrc'
+alias sysRead='cat ~/.bashrc_aliases'
 alias sysOff='shutdown now'
 alias sysHibernate='sudo systemctl hibernate'
 alias sysUpdate='sudo apt update && sudo apt upgrade -y'
+alias sysAdd='sudo apt install $1'
+alias sysRemove='sudo apt remove $1'
 #alias sysNvidia='sudo apt install nvidia-driver-$1'
 alias sysManager='/home/bbeloin/go/bin/./gotop --nvidia --fahrenheit --mbps -a -r 01s'
-alias sysInfo='inxi -Fxz'
+alias sysInfo='inxi -b'
 alias sysTarUzip='tar -xzf $1'
 alias sysUzip='unzip -e $1'
-
+alias sysCreate='mkdir $1'
+alias sysDelete='rm -rf $1'
+alias sysClear='rm -rf *'
 
 #Web aliases
 alias open='xdg-open  $1'
@@ -27,4 +35,14 @@ alias chrome='xdg-open  https://www.google.com'
 alias youtube='xdg-open  https://www.youtube.com'
 
 #applacations
-alias balenaEtcher='Downloads/balenaEtcher-linux-x64/./balena-etcher'
+#alias balenaEtcher='Downloads/balenaEtcher-linux-x64/./balena-etcher'
+
+#General remaps
+alias download='cd ~/Downloads/'
+alias document='cd ~/Documents/'
+
+#code
+alias ex='exit'
+alias gRun='go run .'
+alias gBuild='go build .'
+alias gTest='go test -v .'
