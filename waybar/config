@@ -1,0 +1,32 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "bluetooth", "pulseaudio", "tray", "custom/hibernate"],
+  "network": {
+    "format-wifi": "ᯤ {essid}",
+    "format-ethernet": "🖳 Wired",
+    "format-disconnected": "❌Disconnected",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "♪ {volume}%",
+    "format-muted": "🔇 {volume}%",
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+  "bluetooth": {
+    "format": "ᛒ {status}",
+    "on-click": "blueberry"
+  },
+  "tray": {
+    "icon-size": 16
+  },
+  "custom/hibernate": {
+        "format": "⏻ Power",
+        "tooltip": "Hibernate",
+        "on-click": "systemctl hibernate"
+    },
+}

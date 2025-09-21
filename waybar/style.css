@@ -1,0 +1,18 @@
+* {
+  border: none;
+  font-family: Noto Sans;
+  font-size: 14px;
+}
+
+#waybar {
+  color: #FFFFFF;
+}
+
+#workspaces button {
+  padding: 0 5px;
+}
+
+#clock, #pulseaudio, #bluetooth, #network, #tray, #custom {
+  padding: 0 10px;
+  color: #FFFFFF;
+}
